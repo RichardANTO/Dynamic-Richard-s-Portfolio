@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Certificates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css?v=4">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <%- include('partials/navbar') %>
+
+        <div class="main-content">
+            <section class="content">
+                <h2>📜 My Certificates</h2>
+
+                <div class="cards">
+                    <% portfolioData.certificates.forEach(cert=> { %>
+                        <div class="card certificate-card">
+                            <div class="card-content">
+                                <h3>
+                                    <%= cert.title %>
+                                </h3>
+                                <p style="color: #666; margin-bottom: 10px;">
+                                    Issued by <%= cert.issuer.replace(/[\*\s\.\w]+(📜|🔥|☁️|🐍)+/g, '' ).trim() %>
+                                </p>
+                                <div class="certificate-preview">
+                                    <i class="fa-solid fa-file-pdf"></i>
+                                    <a href="<%= cert.pdfUrl %>" target="_blank" class="btn btn-tiny"
+                                        style="margin-top: 10px;">View Certificate (PDF)</a>
+                                </div>
+                            </div>
+                        </div>
+                        <% }); %>
+                </div>
+            </section>
+        </div>
+
+        <footer id="foot" class="footer">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <h3>
+                        <%= portfolioData.footerInfo.name %>
+                    </h3>
+                    <p>
+                        <%= portfolioData.footerInfo.line1 %>
+                    </p>
+                    <p>
+                        <%= portfolioData.footerInfo.line2 %>
+                    </p>
+                </div>
+
+                <div class="footer-center">
+                    <a href="<%= portfolioData.footerInfo.githubLink %>" target="_blank" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="<%= portfolioData.footerInfo.emailLink %>" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="<%= portfolioData.footerInfo.phoneLink %>" title="Phone">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <a href="<%= portfolioData.footerInfo.linkedinLink %>" target="_blank" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+
+                <div class="footer-right">
+                    <p>Designed & Built with ❤️ by <strong>
+                            <%= portfolioData.footerInfo.name %>
+                        </strong></p>
+                    <p>© <span id="year"></span> All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Auto-update year
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+
+        <script src="/js/script.js"></script>
+</body>
+
+</html>

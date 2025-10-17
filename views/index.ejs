@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css?v=4">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <%- include('partials/navbar') %>
+
+        <div class="main-content">
+            <section class="carousel">
+                <% portfolioData.carousel.forEach((slide, index)=> { %>
+                    <div class="carousel-slide <%= index === 0 ? 'active' : '' %>"
+                        style="background-image: url('<%= slide.url %>');">
+
+                        <div class="carousel-text">
+                            <h1>
+                                <%= slide.title %>
+                            </h1>
+                            <p>
+                                <%= slide.description %>
+                            </p>
+                            <a href="<%= slide.link %>" class="btn">
+                                <%= slide.buttonText %>
+                            </a>
+                        </div>
+                    </div>
+                    <% }); %>
+
+                        <div class="carousel-controls">
+                            <span class="prev">&#10094;</span>
+                            <span class="next">&#10095;</span>
+                        </div>
+            </section>
+
+            <section id="about-project" class="content">
+                <h2>
+                    <%= portfolioData.projectSummary.title %>
+                </h2>
+                <div class="about-project-container">
+                    <div class="about-project-image">
+                        <img src="<%= portfolioData.projectSummary.image %>" alt="Project Preview">
+                    </div>
+                    <div class="about-project-text">
+                        <p>
+                            <%= portfolioData.projectSummary.paragraph1 %>
+                        </p>
+                        <p>
+                            <%= portfolioData.projectSummary.paragraph2 %>
+                        </p>
+                        <a href="<%= portfolioData.projectSummary.buttonLink %>" class="btn">View All Projects</a>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="education" class="content education-section">
+                <h2>My Education & Experience</h2>
+                <div class="education-container">
+                    <% portfolioData.education.forEach(edu=> { %>
+                        <div class="education-card">
+                            <img src="<%= edu.imageUrl %>" alt="<%= edu.title %> Logo" class="college-logo">
+                            <div class="education-info">
+                                <h3>
+                                    <%= edu.title %>
+                                </h3>
+                                <p>
+                                    <%= edu.institution %>
+                                </p>
+                                <p>
+                                    <%= edu.years %>
+                                </p>
+                            </div>
+                        </div>
+                        <% }); %>
+                </div>
+            </section>
+
+            <section id="my-work" class="content">
+                <h2>My Gallery</h2>
+                <div class="cards">
+                    <% portfolioData.gallery.forEach(photo=> { %>
+                        <div class="card">
+                            <img src="<%= photo.url %>" alt="<%= photo.caption %>">
+                            <h3>
+                                <%= photo.caption %>
+                            </h3>
+                        </div>
+                        <% }); %>
+                </div>
+            </section>
+
+            <section id="about" class="content about-section">
+                <h2>My Journey</h2>
+                <div class="about-container">
+                    <img src="<%= portfolioData.about.photoUrl %>" alt="My Photo" class="about-img">
+                    <div class="about-text">
+                        <p>
+                            <%= portfolioData.about.summary %>
+                        </p>
+                        <a href="/about" class="btn">Read More</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer id="foot" class="footer">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <h3>
+                        <%= portfolioData.footerInfo.name %>
+                    </h3>
+                    <p>
+                        <%= portfolioData.footerInfo.line1 %>
+                    </p>
+                    <p>
+                        <%= portfolioData.footerInfo.line2 %>
+                    </p>
+                </div>
+
+                <div class="footer-center">
+                    <a href="<%= portfolioData.footerInfo.githubLink %>" target="_blank" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="<%= portfolioData.footerInfo.emailLink %>" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="<%= portfolioData.footerInfo.phoneLink %>" title="Phone">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <a href="<%= portfolioData.footerInfo.linkedinLink %>" target="_blank" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+
+                <div class="footer-right">
+                    <p>Designed & Built with ❤️ by <strong>
+                            <%= portfolioData.footerInfo.name %>
+                        </strong></p>
+                    <p>© <span id="year"></span> All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Auto-update year
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+        <script src="/js/script.js"></script>
+
+</body>
+
+</html>

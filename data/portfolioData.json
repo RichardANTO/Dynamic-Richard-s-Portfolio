@@ -1,0 +1,206 @@
+{
+  "carousel": [
+    {
+      "id": 1,
+      "url": "/uploads/Carousel/1760012227790-carousel-1.png",
+      "title": "Welcome!",
+      "description": "Explore my projects and journey in software engineering.",
+      "link": "/about",
+      "buttonText": "View Story"
+    },
+    {
+      "id": 2,
+      "url": "/uploads/Carousel/1760011924314-carousel-2.png",
+      "title": "Coding Excellence",
+      "description": "See my latest full-stack and front-end solutions.",
+      "link": "/projects",
+      "buttonText": "View Projects"
+    },
+    {
+      "id": 3,
+      "url": "/uploads/Carousel/1760011827311-1759937704712-carousel-3.png",
+      "title": "My Github",
+      "description": "Click the button to view my GitHub projects.",
+      "link": "https://github.com/RichardANTO",
+      "buttonText": "Contact Me"
+    }
+  ],
+  "about": {
+    "photoUrl": "/uploads/Story/1760009553425-story.png",
+    "summary": "Hi, I'm Richard Antoine I — a tech enthusiast pursuing my Master's in Software Engineering & Digital Transformation at ESIGELEC, France.\r\nI hold a Bachelor's in Computer Science from India and have internship experience as a Web Developer and Full Stack Developer.\r\nI'm skilled in Java, Python, web development, cloud computing, and databases.\r\nClick below to know more about me...👇",
+    "fullStory": "Hello! I'm Richard Antoine Iroudayaradjou, a passionate software developer who loves technology, coding, and solving real-world problems.\r\n\r\nI'm currently pursuing my Master's in Science and Technology – Software Engineering & Digital Transformation at ESIGELEC, France.\r\n\r\nI completed my Bachelor's in Computer Science in Pondicherry, India, where I built a strong foundation in programming, software development, and database systems.",
+    "skills": [
+      "💻 Web Developer Intern — Twilight, Puducherry Designed and developed responsive web applications.",
+      "🌐Full Stack Developer Intern — Cloud Logic, Pondicherry Contributed to end-to-end development using Angular, .NET Core, and MySQL.",
+      "☁️ AWS Cloud Services — Cloud Logic, Pondicherry Worked with AWS Cloud Services for deployment and infrastructure management.",
+      "Languages & Tools: Java, Python, Web Development, Cloud Computing, MySQL, Big Data (Hadoop), Mobile Development.",
+      "As a software developer, I am currently seeking an internship opportunity to sharpen my skills, gain industry experience, and contribute to innovative projects.",
+      "I'm always eager to collaborate, learn, and take on new challenges in technology."
+    ]
+  },
+  "projectSummary": {
+    "title": "About My Project",
+    "image": "/uploads/Project/1760012348422-project.png",
+    "paragraph1": "This project is a demonstration of my skills in web development. It showcases clean design, responsive layouts, and interactive elements that enhance user experience. I used modern technologies and best practices to build it.\r\n",
+    "paragraph2": "The project focuses on creating professional and user-friendly interfaces that adapt to different devices and screens.",
+    "buttonLink": "/projects"
+  },
+  "education": [
+    {
+      "imageUrl": "/uploads/Education/1760012480865-education-1.png",
+      "title": "Bachelor of Computer Application",
+      "institution": "Pope John Paul II college of education Puducherry",
+      "years": "2020 - 2023"
+    },
+    {
+      "imageUrl": "/uploads/Education/1760043312124-Gemini_Generated_Image_vxjnhivxjnhivxjn.png",
+      "title": "Intern Full-Stack Developer",
+      "institution": "Twilight",
+      "years": "2022 - 2023"
+    },
+    {
+      "imageUrl": "/uploads/Education/1760043507793-Gemini_Generated_Image_eb5mydeb5mydeb5m.png",
+      "title": "Intern Full stack development & AWS Cloud Services",
+      "institution": "CloudLogic",
+      "years": "2023 - 2024"
+    },
+    {
+      "imageUrl": "/uploads/Education/1760043581640-education-2.png",
+      "title": "Master's in Software Engineering & Digital Transformation",
+      "institution": "ESIGELEC",
+      "years": "2024 - Present"
+    }
+  ],
+  "certificates": [
+    {
+      "id": 5,
+      "title": "Python Programming",
+      "issuer": "Dynamic Networking🐍.",
+      "pdfUrl": "/uploads/Pdf/1760041587517-Python certification.pdf"
+    },
+    {
+      "id": 7,
+      "title": "Responsive Web Design",
+      "issuer": " FreeCodeCamp 🔥.",
+      "pdfUrl": "/uploads/Pdf/1760041756954-Free code camp certificate.pdf"
+    },
+    {
+      "id": 8,
+      "title": "Full stack development",
+      "issuer": "CloudLogic☁️.",
+      "pdfUrl": "/uploads/Pdf/1760041811905-Full Stack Developer.pdf"
+    },
+    {
+      "id": 9,
+      "title": "AWS Cloud Services",
+      "issuer": "CloudLogic ☁️.",
+      "pdfUrl": "/uploads/Pdf/1760041859110-AWS Cloud Service.pdf"
+    },
+    {
+      "id": 10,
+      "title": "Full-Stack.",
+      "issuer": "Twilight 📜.",
+      "pdfUrl": "/uploads/Pdf/1760041919078-Twilight internshipcertificate.pdf"
+    },
+    {
+      "id": 11,
+      "title": "Oracle Java SE 17 Development",
+      "issuer": "Ûdemy 📜.",
+      "pdfUrl": "/uploads/Pdf/1760041989806-Udemy Java.pdf"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "url": "/uploads/Gallery/1760012657665-gallery-1.png",
+      "caption": "#1 Just me."
+    },
+    {
+      "id": 2,
+      "url": "/uploads/Gallery/1760012685370-gallery-2.png",
+      "caption": "Sharing my thoughts with the class."
+    },
+    {
+      "id": 3,
+      "url": "/uploads/Gallery/1760012709221-gallery-3.png",
+      "caption": "Less color, more meaning"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj1760013601538",
+      "title": "Java Quiz app 2.0",
+      "description": "A customizable quiz app built with Java in Android Studio. Users can add or delete questions, pick difficulty levels, track scores, and see explanations after each answer. It supports any topic, and the full source code is available on GitHub for customization and learning.",
+      "githubLink": "https://github.com/RichardANTO/JavaQuizApp20",
+      "images": [
+        "/uploads/Project/1760013872466-project1-1.png",
+        "/uploads/Project/1760013884867-project1-2.png",
+        "/uploads/Project/1760013893964-project1-3.png"
+      ]
+    },
+    {
+      "id": "proj1760013784072",
+      "title": "Big Data using Hadoop",
+      "description": "This project demonstrates a complete big data pipeline for analyzing synthetic financial transactions using Hadoop MapReduce. It supports any topic, and the full source code is available on GitHub for customization and learning.",
+      "githubLink": "https://github.com/RichardANTO/Big-Data-using-Hadoop",
+      "images": [
+        "/uploads/Project/1760013911735-project2-1.png",
+        "/uploads/Project/1760013923761-project1-2.png",
+        "/uploads/Project/1760013931983-project2-3.png"
+      ]
+    },
+    {
+      "id": "proj1760014157674",
+      "title": "Dynamic Portfolio Website",
+      "description": "This is a dynamic profile website with an admin login system. The admin can log in to update or change the text and content displayed on the website in real time. The full project source code is available on GitHub. ",
+      "githubLink": "https://github.com/RichardANTO/Dynamic-Web-Richard-s-Portfolio",
+      "images": [
+        "/uploads/Project/1760014181681-project3-1.png",
+        "/uploads/Project/1760014363601-Screenshot 2025-10-09 145155.png",
+        "/uploads/Project/1760014371449-Screenshot 2025-10-09 145032.png"
+      ]
+    },
+    {
+      "id": "proj1760037051749",
+      "title": "Personal-Finance-Investment-Dashboard",
+      "description": "This project is a personal finance dashboard using Python that helps users manage daily expenses and income. It includes features to filter, edit, delete, and add transactions, along with interactive visualizations like pie and line charts. Data updates are saved automatically, ensuring accurate financial tracking through an easy-to-use Streamlet interface.",
+      "githubLink": "https://github.com/RichardANTO/Personal-Finance-Investment-Dashboard",
+      "images": [
+        "/uploads/Project/1760037384174-ChatGPT Image Oct 9, 2025, 09_15_50 PM.png",
+        "/uploads/Project/1760037410359-python.jpg",
+        "/uploads/Project/1760037423234-python 1.jpg"
+      ]
+    },
+    {
+      "id": "proj1760038599006",
+      "title": "Food Delivery Management System",
+      "description": "The Food Delivery Management System is a Java Swing-based application that streamlines the entire process from customer ordering to driver delivery. It supports multi-role access for Customers, Drivers, and Schedulers with real-time updates, MySQL integration, and secure authentication using BCrypt. The full source code is available on GitHub",
+      "githubLink": "https://github.com/RichardANTO/FoodDeliveryGUI",
+      "images": [
+        "/uploads/Project/1760038618176-Food Delivery Workflow in Java.png",
+        "/uploads/Project/1760038766241-java 1.jpg",
+        "/uploads/Project/1760038856506-java 3.jpg"
+      ]
+    },
+    {
+      "id": "proj1760042056867",
+      "title": "TicTacToeGUI",
+      "description": "The Tic Tac Toe Game is a Java GUI-based application that lets players compete against the computer with three difficulty levels — Easy, Medium, and Hard. It features an interactive interface, smart AI logic for challenging gameplay, and provides a fun way to test your strategy skills. The full source code is available on GitHub.",
+      "githubLink": "https://github.com/RichardANTO/TicTacToeGUI",
+      "images": [
+        "/uploads/Project/1760042114087-ChatGPT Image Oct 9, 2025, 10_18_22 PM.png",
+        "/uploads/Project/1760042157526-Screenshot 2025-10-09 215343.png",
+        "/uploads/Project/1760042248018-Screenshot 2025-10-09 223702.png"
+      ]
+    }
+  ],
+  "footerInfo": {
+    "name": "Richard Antoine ",
+    "line1": "Master's in Software Engineering & Digital Transformation",
+    "line2": "ESIGELEC,France",
+    "githubLink": "https://github.com/RichardANTO",
+    "emailLink": "mailto:richyanto30@gmail.com",
+    "phoneLink": "tel:+330759288900",
+    "linkedinLink": "https://www.linkedin.com/in/richard-antoine30789"
+  }
+}
