@@ -46,7 +46,37 @@ body {
     min-height: calc(100vh - 70px);
 }
 
-/* ================= NAV BAR STYLES - ULTIMATE FIXED VERSION ================= */
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 700;
+}
+
+p {
+    margin: 0 0 1rem 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    min-height: 1px;
+}
+
+/* ================= NAV BAR STYLES - COMPLETELY FIXED ================= */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -65,15 +95,10 @@ body {
     transform: translateZ(0);
     height: 70px;
     box-sizing: border-box;
-    /* ULTIMATE FIXES FOR MOBILE CHROME DESKTOP SITE MODE */
+    /* CRITICAL FIXES FOR MOBILE DESKTOP SITE */
     min-width: 320px;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    will-change: transform;
-    -webkit-font-smoothing: subpixel-antialiased;
-    /* CRITICAL: Prevent any layout shifts */
-    flex-shrink: 0;
-    -webkit-flex-shrink: 0;
 }
 
 .navbar .logo {
@@ -84,16 +109,8 @@ body {
     white-space: nowrap;
     margin-right: 20px;
     flex-shrink: 0;
-    /* FIX: Allow logo to show full text */
-    min-width: auto;
-    width: auto;
-    display: block;
-    /* CRITICAL: Prevent any text wrapping but allow full text */
-    overflow: visible;
-    text-overflow: clip;
-    -webkit-flex-shrink: 0;
-    flex: 0 0 auto;
-    padding: 5px 0;
+    /* CRITICAL FIX: Prevent logo shifting */
+    min-width: 200px;
 }
 
 .navbar .nav-links {
@@ -103,32 +120,18 @@ body {
     padding: 0;
     transition: all 0.3s ease;
     margin-left: auto;
-    /* ULTIMATE FIX: Completely fixed flex behavior */
+    /* CRITICAL FIX: Prevent flexbox shifting */
     flex-shrink: 0;
-    width: auto;
-    -webkit-flex-shrink: 0;
-    flex: 0 0 auto;
-    align-items: center;
 }
 
 .navbar .nav-links li {
     margin-left: 1.5rem;
-    /* ULTIMATE FIX: Completely fixed items */
+    /* CRITICAL FIX: Prevent item shifting */
     flex-shrink: 0;
-    width: auto;
-    -webkit-flex-shrink: 0;
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
 }
 
 .navbar .nav-links li:nth-last-child(2) {
     margin-left: 2.5rem;
-}
-
-/* FIX: Ensure admin login button aligns properly with other nav items */
-.navbar .nav-links li:last-child {
-    margin-left: 1.5rem;
 }
 
 .navbar .nav-links a {
@@ -139,11 +142,8 @@ body {
     padding: 5px 0;
     position: relative;
     transition: color 0.3s ease-out;
-    /* ULTIMATE FIX: Prevent any text changes */
+    /* CRITICAL FIX: Prevent text wrapping */
     white-space: nowrap;
-    display: block;
-    -webkit-flex-shrink: 0;
-    line-height: 1.4;
 }
 
 .navbar .nav-links a::after {
@@ -166,6 +166,7 @@ body {
 }
 
 .admin-login-btn {
+
     color: #fff;
     font-weight: 600;
     padding: 0.7rem 1.4rem;
@@ -175,13 +176,9 @@ body {
     line-height: 1;
     white-space: nowrap;
     transition: all 0.3s ease;
-    display: inline-block;
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
-    /* FIX: Ensure proper vertical alignment */
-    vertical-align: middle;
-    margin: 0;
 }
+
+/* REMOVED HOVER EFFECTS FOR LOGIN BUTTON AS REQUESTED */
 
 .hamburger {
     display: none;
@@ -191,11 +188,8 @@ body {
     cursor: pointer;
     z-index: 1001;
     flex-shrink: 0;
-    /* ULTIMATE FIX: Completely fixed hamburger */
+    /* CRITICAL FIX: Prevent hamburger shifting */
     min-width: 25px;
-    width: 25px;
-    -webkit-flex-shrink: 0;
-    flex: 0 0 25px;
 }
 
 .hamburger span {
@@ -205,8 +199,6 @@ body {
     background-color: #ffffff;
     border-radius: 2px;
     transition: all 0.3s ease;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -228,19 +220,15 @@ body {
     -webkit-backdrop-filter: blur(5px);
 }
 
-/* ================= MOBILE RESPONSIVENESS - ULTIMATE FIXED VERSION ================= */
+/* ================= MOBILE RESPONSIVENESS - COMPLETELY FIXED ================= */
 @media (max-width: 900px) {
     .navbar {
         padding: 15px 20px;
         flex-wrap: nowrap;
         position: fixed;
         height: 65px;
-        /* ULTIMATE FIX: Pixel-perfect layout */
+        /* CRITICAL FIX: Consistent spacing */
         justify-content: space-between;
-        align-items: center;
-        gap: 0;
-        -webkit-justify-content: space-between;
-        -webkit-align-items: center;
     }
 
     .main-content {
@@ -251,13 +239,9 @@ body {
     .hamburger {
         display: flex;
         order: 2;
-        /* ULTIMATE FIX: Completely fixed positioning */
+        /* CRITICAL FIX: Fixed position for hamburger */
         position: relative;
         right: 0;
-        margin-left: auto;
-        flex: 0 0 25px;
-        -webkit-flex: 0 0 25px;
-        -webkit-order: 2;
     }
 
     .navbar .nav-links {
@@ -279,10 +263,9 @@ body {
         margin-left: 0;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        /* ULTIMATE FIX: No layout shifts */
+        /* CRITICAL FIX: Prevent mobile layout shifts */
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
-        will-change: transform;
     }
 
     .navbar .nav-links.active {
@@ -294,11 +277,8 @@ body {
         width: 100%;
         text-align: center;
         margin-left: 0;
-        /* ULTIMATE FIX: Fixed mobile items */
+        /* CRITICAL FIX: Fixed mobile item width */
         min-width: auto;
-        flex: 0 0 auto;
-        -webkit-flex: 0 0 auto;
-        display: block;
     }
 
     .navbar .nav-links li:nth-last-child(2) {
@@ -314,10 +294,8 @@ body {
         position: relative;
         width: 100%;
         text-align: center;
-        /* ULTIMATE FIX: No text changes */
+        /* CRITICAL FIX: Prevent text wrapping in mobile */
         white-space: nowrap;
-        -webkit-tap-highlight-color: transparent;
-        line-height: 1.4;
     }
 
     .navbar .nav-links a::after {
@@ -335,11 +313,8 @@ body {
         box-shadow: none;
         transform: none;
         text-align: center;
-        /* ULTIMATE FIX: Fixed button */
+        /* CRITICAL FIX: Fixed button width in mobile */
         min-width: 150px;
-        flex-shrink: 0;
-        -webkit-flex-shrink: 0;
-        padding: 12px 20px;
     }
 
     .nav-links.active li {
@@ -347,36 +322,12 @@ body {
         background: none !important;
     }
 
-    /* ULTIMATE FIX: Logo positioning - COMPLETELY FIXED */
+    /* CRITICAL FIX: Logo positioning for mobile */
     .navbar .logo {
         min-width: auto;
-        width: auto;
         flex-grow: 1;
         text-align: left;
         margin-right: 0;
-        font-size: 1.5rem;
-        flex: 1 1 auto;
-        -webkit-flex: 1 1 auto;
-        overflow: visible;
-        text-overflow: clip;
-        white-space: nowrap;
-        -webkit-line-clamp: none;
-        /* FIX: Allow full logo text on mobile */
-        max-width: none;
-        padding: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        padding: 12px 15px;
-    }
-
-    .navbar .logo {
-        font-size: 1.3rem;
-        /* Smaller font but full text visible */
-        flex: 0 1 auto;
-        -webkit-flex: 0 1 auto;
     }
 }
 
@@ -385,11 +336,9 @@ body {
         flex-wrap: nowrap;
         padding: 10px 15px;
         height: 60px;
-        /* ULTIMATE FIX: Pixel-perfect small mobile */
+        /* CRITICAL FIX: Consistent small mobile layout */
         justify-content: space-between;
         align-items: center;
-        gap: 10px;
-        -webkit-justify-content: space-between;
     }
 
     .main-content {
@@ -400,15 +349,10 @@ body {
     .navbar .logo {
         flex-grow: 1;
         margin-right: 0;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         text-align: left;
-        /* ULTIMATE FIX: Completely fixed logo */
-        min-width: auto;
-        flex: 1 1 auto;
-        -webkit-flex: 1 1 auto;
-        overflow: visible;
-        text-overflow: clip;
-        max-width: none;
+        /* CRITICAL FIX: Prevent logo shrinking */
+        min-width: 180px;
     }
 
     .navbar .nav-links {
@@ -417,85 +361,29 @@ body {
     }
 
     .hamburger {
-        /* ULTIMATE FIX: Completely fixed hamburger */
+        /* CRITICAL FIX: Fixed hamburger position */
         position: static;
         margin-left: auto;
-        flex: 0 0 25px;
-        -webkit-flex: 0 0 25px;
     }
 }
 
-/* ULTIMATE CRITICAL FIX: Mobile Chrome Desktop Site Mode Specific */
-@media screen and (max-width: 900px) {
-    .navbar {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        /* FORCE hardware acceleration */
-        -webkit-perspective: 1000;
-        perspective: 1000;
-    }
-
-    .navbar .logo {
-        -webkit-flex: 1 1 auto;
-        flex: 1 1 auto;
-        -webkit-align-self: center;
-        align-self: center;
-        /* CRITICAL: Prevent any size recalculations */
-        -webkit-flex-basis: auto;
-        flex-basis: auto;
-    }
-
-    .hamburger {
-        -webkit-flex: 0 0 auto;
-        flex: 0 0 auto;
-        -webkit-flex-shrink: 0;
-        flex-shrink: 0;
-    }
-
-    /* ULTIMATE FIX: Force consistent rendering */
-    .navbar>* {
-        -webkit-flex-shrink: 0;
-        flex-shrink: 0;
-    }
-}
-
-/* ULTIMATE FIX: Mobile desktop site viewport issues */
+/* Fix for mobile desktop site viewport issues */
 @media (max-width: 900px) and (min-width: 768px) {
 
     /* This targets the "desktop site" mode on mobile */
     .navbar {
-        padding: 15px 25px;
-        /* Consistent padding */
-        -webkit-padding: 15px 25px;
+        padding: 15px 30px;
+        /* Slightly larger padding for tablet-like view */
     }
 
     .navbar .logo {
         font-size: 1.6rem;
-        min-width: auto;
-        width: auto;
-        /* FIX: Allow full logo text */
-        -webkit-min-width: auto;
+        min-width: 180px;
     }
 
     .navbar .nav-links a {
         font-size: 0.95rem;
-        /* Consistent font size */
-    }
-
-    .admin-login-btn {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-    }
-}
-
-/* EXTRA FIX: For very small screens */
-@media (max-width: 380px) {
-    .navbar .logo {
-        font-size: 1.1rem;
-    }
-
-    .navbar {
-        padding: 10px 12px;
+        /* Slightly smaller font for better fit */
     }
 }
 
